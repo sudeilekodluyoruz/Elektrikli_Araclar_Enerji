@@ -1,0 +1,37 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.0.0/schema.json",
+  "name": "609563240cb84bcfa2a5",
+  "position": {
+    "x": 220,
+    "y": 640,
+    "z": 5,
+    "height": 56,
+    "width": 1025,
+    "tabOrder": 5
+  },
+  "visual": {
+    "visualType": "textbox",
+    "objects": {
+      "general": [
+        {
+          "properties": {
+            "paragraphs": [
+              {
+                "textRuns": [
+                  {
+                    "value": "Veri notu: EV payı = EV (BEV+PHEV) kayıt / tüm aktarma organları kayıt (ülke yüzdelerinin ortalaması değildir). Karbon ve düşük karbon kartları ülkelerin eşit ağırlıklı ortalamasıdır. Enerji verisi 2024’te bittiği için 2025–2026’da enerji kartları boş görünür; 2019–2022’de EV verisi 34–39 ülkeyi kapsar, 2023’ten itibaren 55–57.",
+                    "textStyle": {
+                      "fontSize": "9pt",
+                      "color": "#5B7B86"
+                    }
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      ]
+    },
+    "drillFilterOtherVisuals": true
+  }
+}

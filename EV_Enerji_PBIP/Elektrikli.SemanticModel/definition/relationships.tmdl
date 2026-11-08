@@ -1,0 +1,20 @@
+relationship FactEV_DimUlke
+	fromColumn: FactEV.ISO3
+	toColumn: DimUlke.ISO3
+
+relationship FactEnerji_DimUlke
+	fromColumn: FactEnerji.ISO3
+	toColumn: DimUlke.ISO3
+
+relationship FactEV_DimTarih
+	fromColumn: FactEV.Ay
+	toColumn: DimTarih.Tarih
+
+relationship DimTarih_DimYil
+	fromColumn: DimTarih.Yil
+	toColumn: DimYil.Yil
+
+relationship FactEnerji_DimYil
+	fromColumn: FactEnerji.Yil
+	toColumn: DimYil.Yil
+

@@ -1,0 +1,112 @@
+table _Olcular
+	lineageTag: 20b38a73-eab1-40bb-8be9-0f0270ecc607
+
+	measure 'EV Kayıt' = CALCULATE(SUM(FactEV[Kayit]), FactEV[AracTuru] = "Electric vehicle (BEV+PHEV)")
+		formatString: #,0
+		displayFolder: 1 Kayıt
+		lineageTag: 47ba9c90-b306-4552-aaae-1ec9b1099585
+
+	measure 'BEV Kayıt' = CALCULATE(SUM(FactEV[Kayit]), FactEV[AracTuru] = "Battery electric")
+		formatString: #,0
+		displayFolder: 1 Kayıt
+		lineageTag: 5e4f4e0d-aefc-4fd7-8250-5b509ac8a70c
+
+	measure 'PHEV Kayıt' = CALCULATE(SUM(FactEV[Kayit]), FactEV[AracTuru] = "Plug-in hybrid")
+		formatString: #,0
+		displayFolder: 1 Kayıt
+		lineageTag: 0d4abd7d-d320-4570-bfb4-9b04326f4904
+
+	measure 'Toplam Kayıt' = CALCULATE(SUM(FactEV[Kayit]), FactEV[AracTuru] = "All drivetrains")
+		formatString: #,0
+		displayFolder: 1 Kayıt
+		lineageTag: 5eb1308a-d4aa-40bb-a49d-ee54f2aa58c6
+
+	measure 'EV Payı %' = DIVIDE([EV Kayıt], [Toplam Kayıt])
+		formatString: 0.0%
+		displayFolder: 1 Kayıt
+		lineageTag: 2e5ff1e0-8fd6-4db7-91ff-f9749d4ec8eb
+
+	measure 'EV Ülke Sayısı' = CALCULATE(DISTINCTCOUNT(FactEV[ISO3]), FactEV[AracTuru] = "All drivetrains")
+		formatString: 0
+		displayFolder: 1 Kayıt
+		lineageTag: 86d57f4a-acf4-40c1-83e5-84fb3a028fb9
+
+	measure 'Karbon Yoğunluğu' = AVERAGE(FactEnerji[KarbonYogunlugu])
+		formatString: #,0.0
+		displayFolder: 2 Şebeke
+		lineageTag: d45cbb3b-c874-4913-82c7-0adcd50f027b
+
+	measure 'Yenilenebilir Pay' = AVERAGE(FactEnerji[YenilenebilirPay]) / 100
+		formatString: 0.0%
+		displayFolder: 2 Şebeke
+		lineageTag: 9e9b053d-e54d-4c3e-9644-96aaf5d8ad16
+
+	measure 'Düşük Karbon Pay' = AVERAGE(FactEnerji[DusukKarbonPay]) / 100
+		formatString: 0.0%
+		displayFolder: 2 Şebeke
+		lineageTag: 2faf23f2-0d06-40c5-9e74-88f359c715f8
+
+	measure 'Elektrik Talebi TWh' = SUM(FactEnerji[ElektrikTalebiTWh])
+		formatString: #,0.0
+		displayFolder: 2 Şebeke
+		lineageTag: 46cccbce-13d1-4dbc-bb08-4a80a454a0aa
+
+	measure 'EV Kayıt Geçen Yıl' =
+			VAR SonVeriAy = CALCULATE(MAX(FactEV[Ay]), ALL(FactEV))
+			VAR Donem = FILTER(VALUES(DimTarih[Tarih]), DimTarih[Tarih] <= EOMONTH(SonVeriAy, 0))
+			VAR OncekiYil = TREATAS(SELECTCOLUMNS(Donem, "T", EDATE([Tarih], -12)), DimTarih[Tarih])
+			RETURN
+			    CALCULATE([EV Kayıt], REMOVEFILTERS(DimYil), REMOVEFILTERS(DimTarih), OncekiYil)
+		formatString: #,0
+		displayFolder: 3 Değişim
+		lineageTag: 0026feb2-f012-4092-9fba-c6a2760af908
+
+	measure 'EV Kayıt Yıllık Değişim %' = DIVIDE([EV Kayıt] - [EV Kayıt Geçen Yıl], [EV Kayıt Geçen Yıl])
+		formatString: 0.0%
+		displayFolder: 3 Değişim
+		lineageTag: 181dd0b2-1d14-4ef4-94c7-f131660d3612
+
+	measure 'EV Payı Geçen Yıl' =
+			VAR SonVeriAy = CALCULATE(MAX(FactEV[Ay]), ALL(FactEV))
+			VAR Donem = FILTER(VALUES(DimTarih[Tarih]), DimTarih[Tarih] <= EOMONTH(SonVeriAy, 0))
+			VAR OncekiYil = TREATAS(SELECTCOLUMNS(Donem, "T", EDATE([Tarih], -12)), DimTarih[Tarih])
+			RETURN
+			    CALCULATE([EV Payı %], REMOVEFILTERS(DimYil), REMOVEFILTERS(DimTarih), OncekiYil)
+		formatString: 0.0%
+		displayFolder: 3 Değişim
+		lineageTag: 1e39c33d-926f-4936-9b2e-1186d0fe774c
+
+	measure 'EV Payı Değişim (puan)' = ([EV Payı %] - [EV Payı Geçen Yıl]) * 100
+		formatString: 0.00
+		displayFolder: 3 Değişim
+		lineageTag: 21cafb39-da56-4c8c-8394-829dcae319cd
+
+	measure 'Temiz Şebekeli EV Payı %' =
+			VAR TemizUlke = FILTER(VALUES(DimUlke[ISO3]), CALCULATE([Karbon Yoğunluğu]) < 200)
+			RETURN CALCULATE([EV Payı %], KEEPFILTERS(TemizUlke))
+		formatString: 0.0%
+		displayFolder: 4 Karbon grupları
+		lineageTag: 295ac40e-f069-4e20-a99e-407bacddc0aa
+
+	measure 'Yüksek Karbonlu Şebekeli EV Payı %' =
+			VAR YuksekKarbonluUlke = FILTER(VALUES(DimUlke[ISO3]), CALCULATE([Karbon Yoğunluğu]) >= 450)
+			RETURN CALCULATE([EV Payı %], KEEPFILTERS(YuksekKarbonluUlke))
+		formatString: 0.0%
+		displayFolder: 4 Karbon grupları
+		lineageTag: fd8455b3-0b21-49b2-a01b-8eab3bd621e1
+
+	column Sutun
+		dataType: int64
+		isHidden
+		lineageTag: d4793c8d-5c80-4000-9869-fd523f715bf6
+		summarizeBy: none
+		sourceColumn: Sutun
+
+	partition _Olcular = m
+		mode: import
+		source =
+				let
+				    Kaynak = #table(type table [Sutun = Int64.Type], {{1}})
+				in
+				    Kaynak
+

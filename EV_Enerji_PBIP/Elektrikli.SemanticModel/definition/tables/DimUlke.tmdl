@@ -1,0 +1,110 @@
+table DimUlke
+	lineageTag: d4912872-551b-40d6-8a67-e0541a9c3155
+
+	column ISO3
+		dataType: string
+		lineageTag: c661c692-bac1-4074-bd14-5302a3179af1
+		summarizeBy: none
+		sourceColumn: ISO3
+
+	column Ulke
+		dataType: string
+		lineageTag: ae396568-9960-45c2-a493-cf2eeeb0e864
+		dataCategory: Country
+		summarizeBy: none
+		sourceColumn: Ulke
+
+	column UlkeTR
+		dataType: string
+		lineageTag: 09101e07-c15d-4178-a5d6-43f81b7bfff3
+		summarizeBy: none
+		sourceColumn: UlkeTR
+
+	column Kita
+		dataType: string
+		lineageTag: 97e5af84-d98f-4a21-81c7-7a5c8f60e352
+		summarizeBy: none
+		sourceColumn: Kita
+
+	column EmberBolge
+		dataType: string
+		lineageTag: 70b74fe3-2be8-4ba5-a399-a580a67e3649
+		summarizeBy: none
+		sourceColumn: EmberBolge
+
+	column AB
+		dataType: boolean
+		lineageTag: 07a4f6a8-59cf-40ec-bd5d-7cac5fd0aec6
+		summarizeBy: none
+		sourceColumn: AB
+
+	column OECD
+		dataType: boolean
+		lineageTag: 3e01942c-7a7d-4ce6-afc9-11e7f1739c95
+		summarizeBy: none
+		sourceColumn: OECD
+
+	column G20
+		dataType: boolean
+		lineageTag: eeb4ba90-aea8-4b16-8313-cfa018548a3e
+		summarizeBy: none
+		sourceColumn: G20
+
+	column G7
+		dataType: boolean
+		lineageTag: 30d8c6d6-71d4-48b5-945c-e7b57d215fcb
+		summarizeBy: none
+		sourceColumn: G7
+
+	column ASEAN
+		dataType: boolean
+		lineageTag: 6787c3d5-b73c-4a20-a123-027577a260b6
+		summarizeBy: none
+		sourceColumn: ASEAN
+
+	column G20Etiket
+		dataType: string
+		lineageTag: b44636e5-bd76-40ee-8fb1-5671f26d7770
+		summarizeBy: none
+		sourceColumn: G20Etiket
+
+	column ABEtiket
+		dataType: string
+		lineageTag: e0b76475-d034-4429-a1ce-fe5009d82c87
+		summarizeBy: none
+		sourceColumn: ABEtiket
+
+	column OECDEtiket
+		dataType: string
+		lineageTag: 5d9586e9-a548-4d91-be99-9ed174e93eed
+		summarizeBy: none
+		sourceColumn: OECDEtiket
+
+	partition DimUlke = m
+		mode: import
+		source =
+				let
+				    Ikili = Binary.Decompress(
+					Binary.FromText(
+						"tVjLduI4EN3nK/iAWsyZWczaNg7QNobjB93JrgAN6FjYHNkmbX5g/mJmme1knx3p/+qSDBnoEOJE3RvdEomvS/W4KhhEoz8gESnTSxyCx0sEdzVl0s7FgoFlw8h1utD7/Tfo/QlW5FqB2rglT1lJf94b6p8a88rybbDEFDOOYMkMN1UpqhTcSuZrdoBrFMXrax/rpwd5CldWEoFVFaVEoZg3jVkjjGZMv+yADUcsq/1yzOxuyNk9r7KJNW5YD5yVJMpTZ89TnbiqeTWh7fpgM7Hg1Urh7p6nZnyhBbbELRcEjIDci/KqXHasFZN8huBjybPDroPZvOOg5NMpReOE+mIw9kG2eyHYlVigisfeKEoiOnOCN7J3xH7lUNU4mOEcwWsgyOXREU53Pybw6G0v8uf0fXCWXDD49g8X/N2huZyG0zcF6k0Zwu5vnoFVqIopnuutfYydEbmci3w1pYe9xvhAUtt73g8n4MicGBH69OmGrJ+R1JsxOPVaVgV4Tw9T+fRQmDLeuuBs2WzJVZBZataJ3cCDLstWKFPokjIow4jQdRJwZxXOc/o03Wj8WCu2lDw3isEtylypmkazgFwPArjmmSC/DsgNGUmcriVmM6aheJ3sbCMf5cpNoMfkCrOaLg8FH6bqhQ70JGPk002VUd5fK/W2h+x7Pejn2aLj0XJknVeAlqntJwH0q4z0tYYhzi7IbFs3B5EPgxnT2X36b6sQz9667YVjEHRhQEVCssEJtIcf171BN1BsecbU0662tjW+zajNc4QhnVgeTizPnfidEQxhUEhkgugI6crVbg35fC5Yx8WifH8IYwsGJc0pRFnqceWDZf1pHMAnXFMGaNVK8GPc2l2Y/sRSMrWhx3xmLCl+nIDPy2WlJy+yNmjKmHwBv/rKVtO8kgvwd49pQRtlG7AObyJqM4G1zieKC4X3ogjP9u/QjxVPifvV7OIbul9gyL7yWU6QFmpkPB2JWo4Db8+7wdiHgK1R7FcjEQv8LtGUS6Z7ryBtFMZNGNwqB+86twx1Y9+wjNOm4b0w6rfqxmAUqsDeYa1gw3b3hgo5dkMYM1k1yy8dBsY0No5zHRMC08YdhzHRyLJaUBEog6V8a0IYjhII85VOi8batCmi3hgiTlfkOpdsb1XSqGujiQeRyDeY0uONYRbGaBJoHpbtCZlhXm6t60MZ/aWrqLd7zFitd6QK+w/38N4b2KPyb8g9Cukzt9pcuE0u6okbUZLWSF+I6Mpcm4p/9NmF6I7NmaY705/vYnP6io2X20afNCXf3Utm2PTx5wBi5HfUxzHWm1eHopaNHfctiJc0bSgfiVCjSZXHSQjx7lGmvGb/G5rs5YnfTnHihZCkNA5lTGOdofmvOT2bSDNesnnHo86e5yuwuRTs27887XgShXh6SF/P05tjThJZB/6oxJIVYNndn/arQxLeQCKrRUUXyQF/qfhPgiFMOCszXD2jSYl8Bw==",
+					BinaryEncoding.Base64), Compression.Deflate),
+				    Csv = Csv.Document(Ikili, [Delimiter=",", Encoding=65001, QuoteStyle=QuoteStyle.Csv]),
+				    Baslik = Table.PromoteHeaders(Csv, [PromoteAllScalars=true]),
+				    Tip = Table.TransformColumnTypes(Baslik, {
+						{"ISO3", type text},
+						{"Ulke", type text},
+						{"UlkeTR", type text},
+						{"Kita", type text},
+						{"EmberBolge", type text},
+						{"AB", type logical},
+						{"OECD", type logical},
+						{"G20", type logical},
+						{"G7", type logical},
+						{"ASEAN", type logical},
+						{"G20Etiket", type text},
+						{"ABEtiket", type text},
+						{"OECDEtiket", type text}
+					}, "en-US")
+				in
+				    Tip
+

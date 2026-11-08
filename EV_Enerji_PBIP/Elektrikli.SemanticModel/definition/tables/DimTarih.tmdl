@@ -1,0 +1,81 @@
+table DimTarih
+	lineageTag: 1bb83ad8-b4d7-4995-a52e-4e0603905759
+	dataCategory: Time
+
+	column Tarih
+		dataType: dateTime
+		isKey
+		formatString: dd.mm.yyyy
+		lineageTag: a196bbf6-0da1-4f43-a9c4-c0bef09677bd
+		summarizeBy: none
+		sourceColumn: Tarih
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column Yil
+		dataType: int64
+		formatString: 0
+		lineageTag: 7f67d09a-8220-43e7-8b5f-277b529ae3bc
+		summarizeBy: none
+		sourceColumn: Yil
+
+	column AyNo
+		dataType: int64
+		formatString: 0
+		lineageTag: 3e18c03d-d76a-47c5-8a35-ee239ad0aead
+		summarizeBy: none
+		sourceColumn: AyNo
+
+	column AyAdi
+		dataType: string
+		lineageTag: ea9fadcd-a664-431f-820f-459a5a88b80b
+		summarizeBy: none
+		sourceColumn: AyAdi
+		sortByColumn: AyNo
+
+	column Ay
+		dataType: dateTime
+		formatString: dd.mm.yyyy
+		lineageTag: 80afa7db-d085-4913-ab50-70e6a4b902e5
+		summarizeBy: none
+		sourceColumn: Ay
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column Ceyrek
+		dataType: string
+		lineageTag: a4f4af3b-d009-40d4-b7de-39c1eaa3d896
+		summarizeBy: none
+		sourceColumn: Ceyrek
+
+	column YilAy
+		dataType: string
+		lineageTag: 5b9571d9-583e-4012-970c-6243e4fcef4b
+		summarizeBy: none
+		sourceColumn: YilAy
+		sortByColumn: YilAySira
+
+	column YilAySira
+		dataType: int64
+		formatString: 0
+		lineageTag: 231f07a5-6618-4325-a421-6324d7b7b8f5
+		summarizeBy: none
+		sourceColumn: YilAySira
+
+	partition DimTarih = m
+		mode: import
+		source =
+				let
+				    Tarihler = List.Dates(#date(2019,1,1), Duration.Days(#date(2026,12,31) - #date(2019,1,1)) + 1, #duration(1,0,0,0)),
+				    Tablo = Table.FromList(Tarihler, Splitter.SplitByNothing(), {"Tarih"}),
+				    Tip = Table.TransformColumnTypes(Tablo, {{"Tarih", type date}}),
+				    Yil = Table.AddColumn(Tip, "Yil", each Date.Year([Tarih]), Int64.Type),
+				    AyNo = Table.AddColumn(Yil, "AyNo", each Date.Month([Tarih]), Int64.Type),
+				    AyAdi = Table.AddColumn(AyNo, "AyAdi", each Date.MonthName([Tarih], "tr-TR"), type text),
+				    Ay = Table.AddColumn(AyAdi, "Ay", each Date.StartOfMonth([Tarih]), type date),
+				    Ceyrek = Table.AddColumn(Ay, "Ceyrek", each "Q" & Text.From(Date.QuarterOfYear([Tarih])), type text),
+				    YilAy = Table.AddColumn(Ceyrek, "YilAy", each Date.ToText([Tarih], "yyyy-MM"), type text),
+				    YilAySira = Table.AddColumn(YilAy, "YilAySira", each [Yil] * 100 + [AyNo], Int64.Type)
+				in
+				    YilAySira
+

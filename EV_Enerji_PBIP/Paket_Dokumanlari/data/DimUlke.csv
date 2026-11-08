@@ -1,0 +1,60 @@
+﻿ISO3,Ulke,UlkeTR,Kita,EmberBolge,AB,OECD,G20,G7,ASEAN,G20Etiket,ABEtiket,OECDEtiket
+ALB,Albania,Arnavutluk,Europe,Europe,False,False,False,False,False,Hayır,Hayır,Hayır
+AUS,Australia,Avustralya,Oceania,Oceania,False,True,True,False,False,Evet,Hayır,Evet
+AUT,Austria,Avusturya,Europe,Europe,True,True,False,False,False,Hayır,Evet,Evet
+BEL,Belgium,Belçika,Europe,Europe,True,True,False,False,False,Hayır,Evet,Evet
+BRA,Brazil,Brezilya,South America,Latin America and Caribbean,False,False,True,False,False,Evet,Hayır,Hayır
+BGR,Bulgaria,Bulgaristan,Europe,Europe,True,False,False,False,False,Hayır,Evet,Hayır
+CAN,Canada,Kanada,North America,North America,False,True,True,True,False,Evet,Hayır,Evet
+CHL,Chile,Şili,South America,Latin America and Caribbean,False,True,False,False,False,Hayır,Hayır,Evet
+CHN,China,Çin,Asia,Asia,False,False,True,False,False,Evet,Hayır,Hayır
+COL,Colombia,Kolombiya,South America,Latin America and Caribbean,False,True,False,False,False,Hayır,Hayır,Evet
+HRV,Croatia,Hırvatistan,Europe,Europe,True,False,False,False,False,Hayır,Evet,Hayır
+CYP,Cyprus,Kıbrıs,Europe,Europe,True,False,False,False,False,Hayır,Evet,Hayır
+CZE,Czechia,Çekya,Europe,Europe,True,True,False,False,False,Hayır,Evet,Evet
+DNK,Denmark,Danimarka,Europe,Europe,True,True,False,False,False,Hayır,Evet,Evet
+ECU,Ecuador,Ekvador,South America,Latin America and Caribbean,False,False,False,False,False,Hayır,Hayır,Hayır
+EST,Estonia,Estonya,Europe,Europe,True,True,False,False,False,Hayır,Evet,Evet
+FIN,Finland,Finlandiya,Europe,Europe,True,True,False,False,False,Hayır,Evet,Evet
+FRA,France,Fransa,Europe,Europe,True,True,True,True,False,Evet,Evet,Evet
+DEU,Germany,Almanya,Europe,Europe,True,True,True,True,False,Evet,Evet,Evet
+GRC,Greece,Yunanistan,Europe,Europe,True,True,False,False,False,Hayır,Evet,Evet
+HKG,Hong Kong,Hong Kong,Asia,Asia,False,False,False,False,False,Hayır,Hayır,Hayır
+HUN,Hungary,Macaristan,Europe,Europe,True,True,False,False,False,Hayır,Evet,Evet
+ISL,Iceland,İzlanda,Europe,Europe,False,True,False,False,False,Hayır,Hayır,Evet
+IND,India,Hindistan,Asia,Asia,False,False,True,False,False,Evet,Hayır,Hayır
+IDN,Indonesia,Endonezya,Asia,Asia,False,False,True,False,True,Evet,Hayır,Hayır
+IRL,Ireland,İrlanda,Europe,Europe,True,True,False,False,False,Hayır,Evet,Evet
+ISR,Israel,İsrail,Asia,Middle East,False,True,False,False,False,Hayır,Hayır,Evet
+ITA,Italy,İtalya,Europe,Europe,True,True,True,True,False,Evet,Evet,Evet
+JPN,Japan,Japonya,Asia,Asia,False,True,True,True,False,Evet,Hayır,Evet
+LVA,Latvia,Letonya,Europe,Europe,True,True,False,False,False,Hayır,Evet,Evet
+LTU,Lithuania,Litvanya,Europe,Europe,True,True,False,False,False,Hayır,Evet,Evet
+LUX,Luxembourg,Lüksemburg,Europe,Europe,True,True,False,False,False,Hayır,Evet,Evet
+MYS,Malaysia,Malezya,Asia,Asia,False,False,False,False,True,Hayır,Hayır,Hayır
+MLT,Malta,Malta,Europe,Europe,True,False,False,False,False,Hayır,Evet,Hayır
+MEX,Mexico,Meksika,North America,Latin America and Caribbean,False,True,True,False,False,Evet,Hayır,Evet
+NPL,Nepal,Nepal,Asia,Asia,False,False,False,False,False,Hayır,Hayır,Hayır
+NLD,Netherlands,Hollanda,Europe,Europe,True,True,False,False,False,Hayır,Evet,Evet
+NZL,New Zealand,Yeni Zelanda,Oceania,Oceania,False,True,False,False,False,Hayır,Hayır,Evet
+NOR,Norway,Norveç,Europe,Europe,False,True,False,False,False,Hayır,Hayır,Evet
+PER,Peru,Peru,South America,Latin America and Caribbean,False,False,False,False,False,Hayır,Hayır,Hayır
+POL,Poland,Polonya,Europe,Europe,True,True,False,False,False,Hayır,Evet,Evet
+PRT,Portugal,Portekiz,Europe,Europe,True,True,False,False,False,Hayır,Evet,Evet
+ROU,Romania,Romanya,Europe,Europe,True,False,False,False,False,Hayır,Evet,Hayır
+SGP,Singapore,Singapur,Asia,Asia,False,False,False,False,True,Hayır,Hayır,Hayır
+SVK,Slovakia,Slovakya,Europe,Europe,True,True,False,False,False,Hayır,Evet,Evet
+SVN,Slovenia,Slovenya,Europe,Europe,True,True,False,False,False,Hayır,Evet,Evet
+ZAF,South Africa,Güney Afrika,Africa,Africa,False,False,True,False,False,Evet,Hayır,Hayır
+KOR,South Korea,Güney Kore,Asia,Asia,False,True,True,False,False,Evet,Hayır,Evet
+ESP,Spain,İspanya,Europe,Europe,True,True,False,False,False,Hayır,Evet,Evet
+SWE,Sweden,İsveç,Europe,Europe,True,True,False,False,False,Hayır,Evet,Evet
+CHE,Switzerland,İsviçre,Europe,Europe,False,True,False,False,False,Hayır,Hayır,Evet
+TWN,Taiwan,Tayvan,Asia,Asia,False,False,False,False,False,Hayır,Hayır,Hayır
+THA,Thailand,Tayland,Asia,Asia,False,False,False,False,True,Hayır,Hayır,Hayır
+TUR,Türkiye,Türkiye,Asia,Europe,False,True,True,False,False,Evet,Hayır,Evet
+UKR,Ukraine,Ukrayna,Europe,Europe,False,False,False,False,False,Hayır,Hayır,Hayır
+GBR,United Kingdom,Birleşik Krallık,Europe,Europe,False,True,True,True,False,Evet,Hayır,Evet
+USA,United States,ABD,North America,North America,False,True,True,True,False,Evet,Hayır,Evet
+URY,Uruguay,Uruguay,South America,Latin America and Caribbean,False,False,False,False,False,Hayır,Hayır,Hayır
+VNM,Vietnam,Vietnam,Asia,Asia,False,False,False,False,True,Hayır,Hayır,Hayır

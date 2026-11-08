@@ -1,0 +1,37 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.14.0/schema.json",
+  "name": "37765a4431b28ef02038",
+  "position": {
+    "x": 23.327693931221631,
+    "y": 46.655387862443263,
+    "z": 5,
+    "height": 32.933214961724651,
+    "width": 1100.5182666376322,
+    "tabOrder": 5
+  },
+  "visual": {
+    "visualType": "textbox",
+    "objects": {
+      "general": [
+        {
+          "properties": {
+            "paragraphs": [
+              {
+                "textRuns": [
+                  {
+                    "value": "Şebeke karbon yoğunluğu ve düşük karbon payı (2019–2024, tüm yıllar) · Kıta ve G20 filtreleri geçerli",
+                    "textStyle": {
+                      "fontSize": "11pt",
+                      "color": "#5b7b86"
+                    }
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      ]
+    },
+    "drillFilterOtherVisuals": true
+  }
+}

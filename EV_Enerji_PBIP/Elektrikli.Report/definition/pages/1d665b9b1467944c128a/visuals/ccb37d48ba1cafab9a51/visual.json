@@ -1,0 +1,243 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.0.0/schema.json",
+  "name": "ccb37d48ba1cafab9a51",
+  "position": {
+    "x": 220,
+    "y": 422,
+    "z": 3,
+    "height": 274,
+    "width": 1025,
+    "tabOrder": 3
+  },
+  "visual": {
+    "visualType": "tableEx",
+    "query": {
+      "queryState": {
+        "Values": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "DimUlke"
+                    }
+                  },
+                  "Property": "UlkeTR"
+                }
+              },
+              "queryRef": "DimUlke.UlkeTR",
+              "nativeQueryRef": "UlkeTR"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "_Olcular"
+                    }
+                  },
+                  "Property": "EV Kayıt"
+                }
+              },
+              "queryRef": "_Olcular.EV Kayıt",
+              "nativeQueryRef": "EV Kayıt"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "_Olcular"
+                    }
+                  },
+                  "Property": "EV Payı %"
+                }
+              },
+              "queryRef": "_Olcular.EV Payı %",
+              "nativeQueryRef": "EV Payı %"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "_Olcular"
+                    }
+                  },
+                  "Property": "Karbon Yoğunluğu"
+                }
+              },
+              "queryRef": "_Olcular.Karbon Yoğunluğu",
+              "nativeQueryRef": "Karbon Yoğunluğu"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "_Olcular"
+                    }
+                  },
+                  "Property": "EV Payı Değişim (puan)"
+                }
+              },
+              "queryRef": "_Olcular.EV Payı Değişim (puan)",
+              "nativeQueryRef": "EV Payı Değişim (puan)"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "_Olcular"
+                    }
+                  },
+                  "Property": "EV Kayıt Yıllık Değişim %"
+                }
+              },
+              "queryRef": "_Olcular.EV Kayıt Yıllık Değişim %",
+              "nativeQueryRef": "EV Kayıt Yıllık Değişim %"
+            }
+          ]
+        }
+      },
+      "sortDefinition": {
+        "sort": [
+          {
+            "field": {
+              "Measure": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "_Olcular"
+                  }
+                },
+                "Property": "EV Kayıt"
+              }
+            },
+            "direction": "Descending"
+          }
+        ],
+        "isDefaultSort": true
+      }
+    },
+    "objects": {
+      "values": [
+        {
+          "properties": {
+            "fontSize": {
+              "expr": {
+                "Literal": {
+                  "Value": "10D"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "visualContainerObjects": {
+      "background": [
+        {
+          "properties": {
+            "color": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "Literal": {
+                      "Value": "'#FFFFFF'"
+                    }
+                  }
+                }
+              }
+            },
+            "transparency": {
+              "expr": {
+                "Literal": {
+                  "Value": "0D"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "border": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "color": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "Literal": {
+                      "Value": "'#DCE8E6'"
+                    }
+                  }
+                }
+              }
+            },
+            "radius": {
+              "expr": {
+                "Literal": {
+                  "Value": "10D"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "title": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "text": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Ülke tablosu'"
+                }
+              }
+            },
+            "fontColor": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "Literal": {
+                      "Value": "'#0B3C49'"
+                    }
+                  }
+                }
+              }
+            },
+            "fontSize": {
+              "expr": {
+                "Literal": {
+                  "Value": "12D"
+                }
+              }
+            },
+            "bold": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "drillFilterOtherVisuals": true
+  }
+}

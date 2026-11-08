@@ -1,0 +1,20 @@
+table DimYil
+	lineageTag: 8730384f-296e-4e42-965a-4fa666897a9a
+
+	column Yil
+		dataType: int64
+		formatString: 0
+		lineageTag: 31e640eb-9c31-4e95-9486-fb871cb06c66
+		summarizeBy: none
+		sourceColumn: Yil
+
+	partition DimYil = m
+		mode: import
+		source =
+				let
+				    Yillar = {2019..2026},
+				    Tablo = Table.FromList(Yillar, Splitter.SplitByNothing(), {"Yil"}),
+				    Tip = Table.TransformColumnTypes(Tablo, {{"Yil", Int64.Type}})
+				in
+				    Tip
+

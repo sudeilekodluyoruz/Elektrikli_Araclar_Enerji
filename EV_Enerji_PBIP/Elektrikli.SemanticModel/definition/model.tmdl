@@ -1,0 +1,22 @@
+model Model
+	culture: tr-TR
+	defaultPowerBIDataSourceVersion: powerBI_V3
+	discourageImplicitMeasures
+	sourceQueryCulture: en-US
+	dataAccessOptions
+		legacyRedirects
+		returnErrorValuesAsNull
+
+annotation PBI_QueryOrder = ["FactEV","FactEnerji","DimUlke","DimTarih","DimYil","_Olcular"]
+
+annotation __PBI_TimeIntelligenceEnabled = 1
+
+annotation PBI_ProTooling = ["DevMode"]
+
+ref table FactEV
+ref table FactEnerji
+ref table DimUlke
+ref table DimTarih
+ref table DimYil
+ref table _Olcular
+
