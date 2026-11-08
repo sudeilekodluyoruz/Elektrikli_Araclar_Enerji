@@ -65,3 +65,4 @@ python analysis/analysis.py
 - Sonuçlar ülke düzeyinde ve **nedensellik göstermez**: teşvikler, fiyatlar ve şarj altyapısı da EV payını belirliyor. İstatistiksel testler keşifsel kabul edilmeli (aynı ülkeler her yıl tekrar kullanılıyor).
 
 ## Yazar
+Sude Nur Kılıç
