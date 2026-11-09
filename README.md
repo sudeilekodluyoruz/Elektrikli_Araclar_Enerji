@@ -12,17 +12,6 @@ Bu projede iki ayrı veri setini birleştirip bu soruya baktım: **aylık elektr
 - **Çin her şeyi değiştiriyor.** 2024'te kayıt ağırlıklı EV payı, yüksek karbonlu şebekeli ülkelerde %31,3 görünüyor. Bunun sebebi tek ülke: Çin'i çıkarınca aynı oran %5,2'ye düşüyor. Bu yüzden ülke medyanı ve ülke düzeyi korelasyonu birlikte verdim.
 - 2024'te EV payı en yüksek ülkeler Norveç (%90,5), İsveç (%57,0) ve Danimarka (%55,4). Türkiye'de pay 2023'te %6,9, 2024'te %11,1 ve 2025'te %21,0.
 
-### Yıllara göre EV payı
-![Yıllara göre EV payı](images/f1.png)
-
-### Karbon yoğunluğu ve EV payı (2024)
-![Dağılım grafiği](images/f3.png)
-
-### Çin etkisi: ağırlıklı oran mı, ülke medyanı mı?
-![Karbon grubuna göre EV payı](images/f4.png)
-
-Diğer grafikler: [aylık BEV/PHEV](images/f2.png), [korelasyonun yıllara göre seyri](images/f5.png), [en yüksek 10 ülke](images/f6.png).
-
 ## Veri
 
 | Dosya | İçerik |
